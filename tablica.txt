@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream>wrtw4t4ertret
 #include <conio.h>
 const short LICZBA_DRUZYN = 6;
 const short MAX_ZNAKOW = 12;
@@ -6,45 +6,45 @@ const short MAX_ZNAKOW = 12;
 int main()
 {
     using namespace std;
-    /*Tworzenie i deklaracja tablic dwuwymiarowej przechowuj¹cej nazwy pañstw w grupie */
+    /*Tworzenie i deklaracja tablic dwuwymiarowej przechowujÄ…cej nazwy paÅ„stw w grupie */
     char tab1[ LICZBA_DRUZYN ][ MAX_ZNAKOW ] = {
-        { 'S', 'l', 'o', 'w', 'a', 'c', 'j', 'a' },
-        { 'I', 'r', 'l', 'a', 'n', 'd', 'i', 'a', ' ', 'P' },
-        { 'C', 'z', 'e', 'c', 'h', 'y' },
-        { 'P', 'o', 'l', 's', 'k', 'a' },
-        { 'S', 'l', 'o', 'w', 'e', 'n', 'i', 'a' },
-        { 'S', 'a', 'n', ' ', 'M', 'a', 'r', '.' },
+        { 'S', 'l', 'r', 'j', 'a', 'c', 'j', 'a' },
+        { 'I', 'r', 'e', 'b', 'k', 'd', 'i', 'a', ' ', 'P' },
+        { 'C', 'z', 'w', 'c', 'h', 'y' },
+        { 'P', 'o', 'a', 's', 'k', 'a' },
+        { 'S', 'l', 'd', 'w', 'e', 'n', 'i', 'a' },
+        { 'S', 'a', 'v', 'k', 'M', 'a', 'r', '.' },
     };
     
-    /*tablica z pkt tab2 i tablica pañstw tab1, maj¹ wspólne indeksy dla ka¿dego pañstwa czyli indeks 3 (tab1[3], tab2[3]) - oznacza Polskê, a indeks 0 S³owacjê */
+    /*tablica z pkt tab2 i tablica paÅ„stw tab1, majÄ… wspÃ³lne indeksy dla kaÅ¼dego paÅ„stwa czyli indeks 3 (tab1[3], tab2[3]) - oznacza PolskÄ™, a indeks 0 SÅ‚owacjÄ™ */
     short tab2[ LICZBA_DRUZYN ] = {
         9, 7, 7, 7, 7, 0 };
-    //tabela zawierajaca lp kompilator okreœli wielkoœæ
+    //tabela zawierajaca lp kompilator okreÅ›li wielkoÅ›Ä‡
     short tab3[] = { 1, 2, 3, 4, 5, 6 };
     
     
-    //Wyœwietlenia danych
+    //WyÅ›wietlenia danych
     cout << "Tabela eliminacji mistrzostw swiata 2010"
     << endl << "Grupa Polska\n\n"
     << " Lp." << "|" << " Druzyna     " << "|"
     << " pkt. " << endl
     << "-------------------------\n"
-    //wyœwietlenie I dru¿yny
+    //wyÅ›wietlenie I druÅ¼yny
     << " " << tab3[ 0 ] << "  "
     << "| " << tab1[ 0 ] << "    | " << tab2[ 0 ]
-    //wyœwietlenie II dru¿yny
+    //wyÅ›wietlenie II druÅ¼yny
     << "\n " << tab3[ 1 ] << "  "
     << "| " << tab1[ 1 ] << "  | " << tab2[ 1 ]
-    //wyœwietlenie III dru¿yny
+    //wyÅ›wietlenie III druÅ¼yny
     << "\n " << tab3[ 2 ] << "  "
     << "| " << tab1[ 2 ] << "      | " << tab2[ 2 ]
-    //wyœwietlenie IV dru¿yny
+    //wyÅ›wietlenie IV druÅ¼yny
     << "\n " << tab3[ 3 ] << "  "
     << "| " << tab1[ 3 ] << "      | " << tab2[ 3 ]
-    //wyœwietlenie V dru¿yny
+    //wyÅ›wietlenie V druÅ¼yny
     << "\n " << tab3[ 4 ] << "  "
     << "| " << tab1[ 4 ] << "    | " << tab2[ 4 ]
-    //wyœwietlenie VI dru¿yny
+    //wyÅ›wietlenie VI druÅ¼yny
     << "\n " << tab3[ 5 ] << "  "
     << "| " << tab1[ 5 ] << "    | " << tab2[ 5 ];
     

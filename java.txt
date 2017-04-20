@@ -1,12 +1,12 @@
 package klasy;
  
 import java.io.*;
-/**
+/**sefesfesgfedrsfesf
  *
  * @author Natalia Potoczniak
  */
-//   implements Serializable Trzeba dodaæ wszêdzie, aby móc
-//                           zapisywaæ obietky do pliku.
+//   implements Serializable Trzeba dodaÄ‡ wszÄ™dzie, aby mÃ³c
+//                           zapisywaÄ‡ obietky do pliku.
 class Towar implements Serializable{
     private String nazwa;
     private float cena;
@@ -58,12 +58,12 @@ class ElemZam  implements Serializable{
         return ile * towar.dajCene();
     }
     public void odcz(){
-        System.out.format("\tnazwa: %s, cena:%.2f, liczba sztuk:%d, koszt zamówienia:%.2f \n", towar.dajNazwe(),towar.dajCene(),ile,kosztZamow());
+        System.out.format("\tnazwa: %s, cena:%.2f, liczba sztuk:%d, koszt zamÃ³wienia:%.2f \n", towar.dajNazwe(),towar.dajCene(),ile,kosztZamow());
     }
  
     @Override
     public String toString(){
-        return String.format("nazwa: %s, cena:%.2f, liczba sztuk:, koszt zamówienia:%.2f \n", towar.dajNazwe(),towar.dajCene(),ile,kosztZamow());
+        return String.format("nazwa: %s, cena:%.2f, liczba sztuk:, koszt zamÃ³wienia:%.2f \n", towar.dajNazwe(),towar.dajCene(),ile,kosztZamow());
     }
  
 }
@@ -91,7 +91,7 @@ class Zamowienie  implements Serializable{
     }
  
     public void odcz(){
-        System.out.format("Koszt ca³ego zamówienia wynosi %.2f z³, a na jego poszególne czêœci sk³ada siê:\n", kosztCalegoZamow());
+        System.out.format("Koszt caÅ‚ego zamÃ³wienia wynosi %.2f zÅ‚, a na jego poszegÃ³lne czÄ™Å›ci skÅ‚ada siÄ™:\n", kosztCalegoZamow());
         for(int i=0; i<liczPozZ; i++){
             tab[i].odcz();
         }
@@ -102,7 +102,7 @@ class Zamowienie  implements Serializable{
  
 public class Main {
  
-    // Zapisuje dok³adnie jeden obiekt do pliku
+    // Zapisuje dokÅ‚adnie jeden obiekt do pliku
     public static void zapis(String nazwaPl, Zamowienie z)throws IOException{
         ObjectOutputStream pl=null;
         try{
@@ -116,7 +116,7 @@ public class Main {
         }
     }
  
-    // Odczytuje dok³adnie jeden obiekt z pliku i wyœwietla o nim informacjê
+    // Odczytuje dokÅ‚adnie jeden obiekt z pliku i wyÅ›wietla o nim informacjÄ™
     public static void odczyt(String nazwaPl)throws IOException,ClassNotFoundException{
         ObjectInputStream pl2=null;
         Zamowienie z = null;
@@ -138,7 +138,7 @@ public class Main {
  
     }
  
-   // Odczytuje wiele obiektów z pliku (wszystkie) i wyœwietla o nim informacjê
+   // Odczytuje wiele obiektÃ³w z pliku (wszystkie) i wyÅ›wietla o nim informacjÄ™
     public static void odczytCalego(String nazwaPl)throws IOException,ClassNotFoundException{
         ObjectInputStream pl2=null;
         Zamowienie z = null;
@@ -147,7 +147,7 @@ public class Main {
             int l=1;
             while(true){
                 z=(Zamowienie)pl2.readObject();
-                System.out.println("\nZamówienie " + l++);
+                System.out.println("\nZamÃ³wienie " + l++);
                 z.odcz();
             }
  
@@ -165,7 +165,7 @@ public class Main {
  
     // Dopisywanie do pliku
     public static void dopisanie(String nazwaPl, Zamowienie z)throws IOException, ClassNotFoundException{
-        // Najwpierw odczytujemy z plkiu to, co by³o tam wczeœniej
+        // Najwpierw odczytujemy z plkiu to, co byÅ‚o tam wczeÅ›niej
         Zamowienie[] tab = new Zamowienie[100]; // do tablicy
         ObjectInputStream pl2=null;
         try{
@@ -175,17 +175,17 @@ public class Main {
                 tab[l++]=(Zamowienie)pl2.readObject();
  
         } catch (EOFException ex) {
-            // Program przeskakuje w to miejsce, kiedy dojdzie do koñca pliku,
-            // czyli kiedy wszystko ju¿ odczyta.
+            // Program przeskakuje w to miejsce, kiedy dojdzie do koÅ„ca pliku,
+            // czyli kiedy wszystko juÅ¼ odczyta.
             // Teraz zamykamy plik, otwieramy w trybie zapisu i wpisujemy
-            // do niego wszystko oraz dopisujemy to, co ma byæ dodane
+            // do niego wszystko oraz dopisujemy to, co ma byÄ‡ dodane
             if(pl2!=null)
                 pl2.close();
  
             ObjectOutputStream pl=null;
             try{
                 pl=new ObjectOutputStream(new FileOutputStream(nazwaPl));
-                // Wpisujemy do pliku to, co w nim ju¿ by³o
+                // Wpisujemy do pliku to, co w nim juÅ¼ byÅ‚o
                 for(int i=0; tab[i]!=null; i++)
                     pl.writeObject(tab[i]);
  
@@ -253,7 +253,7 @@ public class Main {
  
         dopisanie("plik2.dat", z3);
  
-        System.out.println("\n\n************ ODCZYT Z PLIKU KILKU OBIEKTÓW");
+        System.out.println("\n\n************ ODCZYT Z PLIKU KILKU OBIEKTÃ“W");
         odczytCalego("plik2.dat");
     }
 }
