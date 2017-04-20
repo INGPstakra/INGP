@@ -5,7 +5,7 @@
 
 using namespace std;
 class OsobaCL
-{
+{ey6tuio887ugtyujtf6yhu
 protected:
     string m_imie;
     string m_nazwisko;
@@ -55,7 +55,7 @@ void OsobaCL::ShowDaneOsoby( int fImieWidth, int fNazwiskoWidth )
 void OsobaCL::DodajOsobeNaKoniec()
 {
     //Szukanie ostatniej osoby
-    OsobaCL * tOstatniaOsoba = this; //Zapisanie wskaŸnika obecnej osoby do zmiennej
+    OsobaCL * tOstatniaOsoba = this; //Zapisanie wskaÅºnika obecnej osoby do zmiennej
     while( tOstatniaOsoba->m_nastepnaOsoba != NULL ) tOstatniaOsoba = tOstatniaOsoba->m_nastepnaOsoba;
     
     //Utworzenie nowej osoby i zapisanie do ostatniej osoby
@@ -71,10 +71,10 @@ int main()
     OsobaCL * tPierwszaOsoba = new OsobaCL;
     tPierwszaOsoba->Inicjuj();
     
-    /*Wype³nienie pierwszej osoby*/
+    /*WypeÅ‚nienie pierwszej osoby*/
     tPierwszaOsoba->Wypelnij();
     
-    /*Wczytywanie kolejnych osób*/
+    /*Wczytywanie kolejnych osÃ³b*/
     char tZnak;
     do
     {
@@ -89,7 +89,7 @@ int main()
         
     } while(( tZnak != 'n' ) &&( tZnak != 'N' ) );
     
-    /*Wyœwietlanie wszystkich osób*/
+    /*WyÅ›wietlanie wszystkich osÃ³b*/
     OsobaCL * tWyswietlOsoby = tPierwszaOsoba;
     while( tWyswietlOsoby != NULL )
     {
@@ -97,7 +97,7 @@ int main()
         tWyswietlOsoby = tWyswietlOsoby->GetNastepnaOsoba();
     }
     
-    /*Zwalnianie pamiêci*/
+    /*Zwalnianie pamiÄ™ci*/
     tPierwszaOsoba->Sprzatnij();
     delete tPierwszaOsoba;
     
